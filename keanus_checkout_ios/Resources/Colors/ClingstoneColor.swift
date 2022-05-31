@@ -12,19 +12,13 @@ protocol ClingstoneColor {
 }
 
 public enum ClingstonePalette: ClingstoneColor {
-case red, pink, yellow, green, black
+case blue, green
     public var color: UIColor {
         switch self {
-            case .red:
-                return UIColor(named: "red")!
-            case .pink:
-                return UIColor(named: "pink")!
-            case .yellow:
-                return UIColor(named: "yellow")!
+            case .blue:
+                return UIColor(named: "blue")!
             case .green:
                 return UIColor(named: "green")!
-            case .black:
-                return UIColor(named: "black")!
         }
     }
 }

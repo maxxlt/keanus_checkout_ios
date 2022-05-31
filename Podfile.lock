@@ -1,16 +1,24 @@
 PODS:
+  - CombineCocoa (0.4.0)
+  - lottie-ios (3.3.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - CombineCocoa
+  - lottie-ios
   - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
   trunk:
+    - CombineCocoa
+    - lottie-ios
     - SnapKit
 
 SPEC CHECKSUMS:
+  CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 7f024e8085d8e130d305fa54eed645808ffe86ed
+PODFILE CHECKSUM: 75d6bd6e2b15ffb4407966410f983418a14c4d8c
 
 COCOAPODS: 1.11.2

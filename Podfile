@@ -5,6 +5,8 @@ target 'keanus_checkout_ios' do
 
   # Pods for keanus_checkout_ios
   pod 'SnapKit', '~> 5.6.0'
+  pod 'lottie-ios'
+  pod 'CombineCocoa'
 
 end
 

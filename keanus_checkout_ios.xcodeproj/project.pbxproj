@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621CBCBF2845B437009595F7 /* ScannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621CBCBE2845B437009595F7 /* ScannerCell.swift */; };
+		621CBCC12845B625009595F7 /* UIImage+Clingstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621CBCC02845B625009595F7 /* UIImage+Clingstone.swift */; };
 		6237A06F284538DC00BD73BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A06E284538DC00BD73BA /* AppDelegate.swift */; };
 		6237A078284538DC00BD73BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6237A077284538DC00BD73BA /* Assets.xcassets */; };
 		6237A07B284538DC00BD73BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6237A079284538DC00BD73BA /* LaunchScreen.storyboard */; };
@@ -22,6 +24,10 @@
 		6237A0AA2845454100BD73BA /* SetupScannerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0A92845454100BD73BA /* SetupScannerVM.swift */; };
 		6237A0AC2845454A00BD73BA /* SetupScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0AB2845454A00BD73BA /* SetupScannerView.swift */; };
 		6237A0AE2845456800BD73BA /* LaunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0AD2845456800BD73BA /* LaunchManager.swift */; };
+		6237A0B028454E5000BD73BA /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0AF28454E5000BD73BA /* UIImage+Assets.swift */; };
+		6237A0B82845977900BD73BA /* ScannerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0B72845977900BD73BA /* ScannerUtils.swift */; };
+		6237A0BA2845987000BD73BA /* surf-puddle.json in Resources */ = {isa = PBXBuildFile; fileRef = 6237A0B92845987000BD73BA /* surf-puddle.json */; };
+		6237A0BD284599FF00BD73BA /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6237A0BC284599FF00BD73BA /* Loading.swift */; };
 		F6EF7F4EB569F6BEFA5FF636 /* Pods_keanus_checkout_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B28DC238E3E084486E6324 /* Pods_keanus_checkout_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		55B28DC238E3E084486E6324 /* Pods_keanus_checkout_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keanus_checkout_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621CBCBE2845B437009595F7 /* ScannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCell.swift; sourceTree = "<group>"; };
+		621CBCC02845B625009595F7 /* UIImage+Clingstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Clingstone.swift"; sourceTree = "<group>"; };
 		6237A06B284538DC00BD73BA /* keanus_checkout_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keanus_checkout_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6237A06E284538DC00BD73BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6237A077284538DC00BD73BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 		6237A0A92845454100BD73BA /* SetupScannerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupScannerVM.swift; sourceTree = "<group>"; };
 		6237A0AB2845454A00BD73BA /* SetupScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupScannerView.swift; sourceTree = "<group>"; };
 		6237A0AD2845456800BD73BA /* LaunchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchManager.swift; sourceTree = "<group>"; };
+		6237A0AF28454E5000BD73BA /* UIImage+Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
+		6237A0B72845977900BD73BA /* ScannerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerUtils.swift; sourceTree = "<group>"; };
+		6237A0B92845987000BD73BA /* surf-puddle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surf-puddle.json"; sourceTree = "<group>"; };
+		6237A0BC284599FF00BD73BA /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		72FC978E00FA9030526FEC16 /* Pods-keanus_checkout_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keanus_checkout_ios.release.xcconfig"; path = "Target Support Files/Pods-keanus_checkout_ios/Pods-keanus_checkout_ios.release.xcconfig"; sourceTree = "<group>"; };
 		78CCA053A757BCBC8B2CBFAD /* Pods-keanus_checkout_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keanus_checkout_ios.debug.xcconfig"; path = "Target Support Files/Pods-keanus_checkout_ios/Pods-keanus_checkout_ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +95,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		621CBCBD2845B42B009595F7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				621CBCBE2845B437009595F7 /* ScannerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6237A062284538DC00BD73BA = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +124,12 @@
 		6237A06D284538DC00BD73BA /* keanus_checkout_ios */ = {
 			isa = PBXGroup;
 			children = (
+				6237A0B62845976600BD73BA /* Utils */,
 				6237A09D284543DD00BD73BA /* Custom */,
 				6237A0902845419300BD73BA /* Resources */,
 				6237A08F2845418B00BD73BA /* Features */,
 				6237A06E284538DC00BD73BA /* AppDelegate.swift */,
 				6237A0AD2845456800BD73BA /* LaunchManager.swift */,
-				6237A07C284538DD00BD73BA /* Info.plist */,
 			);
 			path = keanus_checkout_ios;
 			sourceTree = "<group>";
@@ -126,9 +146,12 @@
 		6237A0902845419300BD73BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6237A0B32845528C00BD73BA /* Animations */,
+				6237A07C284538DD00BD73BA /* Info.plist */,
 				6237A09A2845437300BD73BA /* Colors */,
 				6237A0942845432600BD73BA /* Fonts */,
 				6237A077284538DC00BD73BA /* Assets.xcassets */,
+				6237A0AF28454E5000BD73BA /* UIImage+Assets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +167,7 @@
 		6237A093284542F400BD73BA /* SetupScanner */ = {
 			isa = PBXGroup;
 			children = (
+				621CBCBD2845B42B009595F7 /* Cells */,
 				6237A0A72845453700BD73BA /* SetupScannerVC.swift */,
 				6237A0A92845454100BD73BA /* SetupScannerVM.swift */,
 				6237A0AB2845454A00BD73BA /* SetupScannerView.swift */,
@@ -179,6 +203,7 @@
 		6237A09D284543DD00BD73BA /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				6237A0BB284599E500BD73BA /* Loading */,
 				6237A0A4284544A700BD73BA /* Button */,
 				6237A0A12845441800BD73BA /* Extensions */,
 				6237A09E284543E900BD73BA /* Label */,
@@ -198,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				6237A0A22845442600BD73BA /* UIFont+Clingstone.swift */,
+				621CBCC02845B625009595F7 /* UIImage+Clingstone.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +234,30 @@
 				6237A0A5284544A700BD73BA /* ClingstoneButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		6237A0B32845528C00BD73BA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				6237A0B92845987000BD73BA /* surf-puddle.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		6237A0B62845976600BD73BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6237A0B72845977900BD73BA /* ScannerUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6237A0BB284599E500BD73BA /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				6237A0BC284599FF00BD73BA /* Loading.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		83359DDAD17352FD56F3E9FB /* Pods */ = {
@@ -283,6 +333,7 @@
 				6237A0992845432600BD73BA /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				6237A07B284538DC00BD73BA /* LaunchScreen.storyboard in Resources */,
 				6237A0982845432600BD73BA /* Montserrat-VariableFont_wght.ttf in Resources */,
+				6237A0BA2845987000BD73BA /* surf-puddle.json in Resources */,
 				6237A078284538DC00BD73BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,11 +390,16 @@
 				6237A09C2845437300BD73BA /* ClingstoneColor.swift in Sources */,
 				6237A06F284538DC00BD73BA /* AppDelegate.swift in Sources */,
 				6237A0A0284543E900BD73BA /* ClingstoneLabel.swift in Sources */,
+				621CBCBF2845B437009595F7 /* ScannerCell.swift in Sources */,
 				6237A0AA2845454100BD73BA /* SetupScannerVM.swift in Sources */,
 				6237A0A82845453700BD73BA /* SetupScannerVC.swift in Sources */,
 				6237A0A6284544A700BD73BA /* ClingstoneButton.swift in Sources */,
+				6237A0B028454E5000BD73BA /* UIImage+Assets.swift in Sources */,
 				6237A0A32845442600BD73BA /* UIFont+Clingstone.swift in Sources */,
 				6237A0AE2845456800BD73BA /* LaunchManager.swift in Sources */,
+				6237A0B82845977900BD73BA /* ScannerUtils.swift in Sources */,
+				621CBCC12845B625009595F7 /* UIImage+Clingstone.swift in Sources */,
+				6237A0BD284599FF00BD73BA /* Loading.swift in Sources */,
 				6237A0AC2845454A00BD73BA /* SetupScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +547,7 @@
 					"$(PROJECT_DIR)/Resources",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keanus_checkout_ios/Info.plist;
+				INFOPLIST_FILE = keanus_checkout_ios/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Keanu's Checkout";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -525,7 +581,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keanus_checkout_ios/Info.plist;
+				INFOPLIST_FILE = keanus_checkout_ios/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Keanu's Checkout";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

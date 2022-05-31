@@ -6,6 +6,7 @@
 //
 
 import Combine
+import BRScanKit
 
 class SetupScannerVM {
     
@@ -15,7 +16,17 @@ class SetupScannerVM {
     }
     
     // MARK: - Published vars
-    @Published private(set) var state: State
+    @Published var state: State
+    @Published var brotherDevices = [BRScanDevice]() {
+        didSet {
+            if brotherDevices.count > 0 {
+                state = .done
+            } else {
+                state = .loading
+            }
+        }
+    }
+    @Published var scannerSelected: Bool = false
     
     // MARK: - Inits
     init() {
