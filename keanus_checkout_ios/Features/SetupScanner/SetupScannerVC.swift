@@ -63,7 +63,7 @@ class SetupScannerVC: UIViewController {
                 .tapPublisher
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] in
-                    
+                    // TODO: push new VC here
                 },
             customView.actionPublisher
                 .receive(on: DispatchQueue.main)
