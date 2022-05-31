@@ -18,4 +18,5 @@ enum ImageAssetName: String, CaseIterable {
     case placeholder
     case checkmark
     case brother_ds940dw
+    case left
 }

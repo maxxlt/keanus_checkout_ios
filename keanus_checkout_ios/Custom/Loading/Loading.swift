@@ -57,6 +57,7 @@ class Loading: UIView {
         let av = AnimationView(name: "surf-puddle")
         av.contentMode = .scaleAspectFit
         av.loopMode = .loop
+        av.backgroundBehavior = .pauseAndRestore
         av.play()
         addSubview(av)
         return av

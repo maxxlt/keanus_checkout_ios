@@ -30,6 +30,7 @@ class SetupScannerVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        vm.scannerSelected = false
         vm.brotherDevices.removeAll()
         brotherBrowser.search()
     }
@@ -39,7 +40,6 @@ class SetupScannerVC: UIViewController {
     
     private func setupBindings() {
         observables = [
-            // TODO: add your observables here
             vm.$state
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] state in
@@ -63,16 +63,22 @@ class SetupScannerVC: UIViewController {
                 .tapPublisher
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] in
-                    // TODO: push new VC here
+                    let vc = ScannerSettingsVC()
+                    self?.navigationController?
+                        .pushViewController(vc, animated: true)
                 },
-            customView.actionPublisher
-                .receive(on: DispatchQueue.main)
-                .sink { [weak self] action in
-                    switch action {
-                    case .action1: break
-                    case .action2: break
-                    }
-                }
+            NotificationCenter.default.publisher(
+                for: UIApplication.willEnterForegroundNotification
+            )
+            .sink { [weak self] _ in
+                self?.viewWillAppear(false)
+            },
+            NotificationCenter.default.publisher(
+                for: UIApplication.didEnterBackgroundNotification
+            )
+            .sink { [weak self] _ in
+                self?.viewWillDisappear(false)
+            }
         ]
     }
     
