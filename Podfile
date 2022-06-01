@@ -9,6 +9,7 @@ target 'keanus_checkout_ios' do
   pod 'CombineCocoa'
   pod 'BetterSegmentedControl', '~> 2.0'
   pod 'Switches'
+  pod 'IQKeyboardManagerSwift'
 
 end
 

@@ -1,6 +1,7 @@
 PODS:
   - BetterSegmentedControl (2.0.1)
   - CombineCocoa (0.4.0)
+  - IQKeyboardManagerSwift (6.5.10)
   - lottie-ios (3.3.0)
   - SnapKit (5.6.0)
   - Switches (3.0.0)
@@ -8,6 +9,7 @@ PODS:
 DEPENDENCIES:
   - BetterSegmentedControl (~> 2.0)
   - CombineCocoa
+  - IQKeyboardManagerSwift
   - lottie-ios
   - SnapKit (~> 5.6.0)
   - Switches
@@ -16,6 +18,7 @@ SPEC REPOS:
   trunk:
     - BetterSegmentedControl
     - CombineCocoa
+    - IQKeyboardManagerSwift
     - lottie-ios
     - SnapKit
     - Switches
@@ -23,10 +26,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Switches: 6d54f7cafb1b7d7c405b19cf7b3de925742d0a55
 
-PODFILE CHECKSUM: 090a540436f5e9d12591af2adf5cda9ab9e1211f
+PODFILE CHECKSUM: 96dbeec578f4bd537a2cd7aa06c2d62ec3285884
 
 COCOAPODS: 1.11.2

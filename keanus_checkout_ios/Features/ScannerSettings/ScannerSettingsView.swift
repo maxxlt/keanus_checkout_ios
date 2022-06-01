@@ -68,12 +68,29 @@ class ScannerSettingsView: UIView {
             $0.right.equalTo(duplexControl)
             $0.width.equalTo(80)
         }
+        sizePromptText.snp.makeConstraints {
+            $0.top.equalTo(blankPageSwitch.snp.bottom).offset(16)
+            $0.left.right.equalTo(duplexControl)
+        }
+        sizeTextField.snp.makeConstraints {
+            $0.top.equalTo(sizePromptText.snp.bottom).offset(8)
+            $0.left.right.equalTo(duplexControl)
+            $0.height.equalTo(54)
+            $0.bottom.equalTo(scanBtn.snp.top).offset(-16)
+        }
+        scanBtn.snp.makeConstraints {
+            $0.bottom.equalTo(self).offset(-32)
+            $0.left.right.equalTo(duplexControl)
+            $0.height.equalTo(54)
+        }
     }
     
     // MARK: - Private members
     @objc private func helloButtonTapped() {
         actionPublisher.send(.action1)
     }
+    private let paperSizes = ["Auto Size", "Photo L", "Photo", "Business Card", "JIS B5",
+                      "A4", "Letter", "Legal", "JIS B4", "Ledger", "A3"]
     
     // MARK: - Lazy Loads
     lazy var backButton: ClingstoneButton = {
@@ -107,7 +124,7 @@ class ScannerSettingsView: UIView {
         addSubview(label)
         return label
     }()
-    private lazy var colorControl: BetterSegmentedControl = {
+    lazy var colorControl: BetterSegmentedControl = {
         let control = BetterSegmentedControl()
         control.segments = LabelSegment.segments(
             withTitles: ["Color", "Speed Color", "Gray Scale"],
@@ -123,7 +140,7 @@ class ScannerSettingsView: UIView {
         addSubview(control)
         return control
     }()
-    private lazy var duplexControl: BetterSegmentedControl = {
+    lazy var duplexControl: BetterSegmentedControl = {
         let control = BetterSegmentedControl()
         control.segments = LabelSegment.segments(
             withTitles: ["Duplex Off", "Duplex Long", "Duplex Short"],
@@ -147,11 +164,46 @@ class ScannerSettingsView: UIView {
         addSubview(label)
         return label
     }()
-    private lazy var blankPageSwitch: YapSwitch = {
+    lazy var blankPageSwitch: YapSwitch = {
         let switcher = YapSwitch()
         switcher.onTintColor = ClingstonePalette.cyan.color
         addSubview(switcher)
         return switcher
+    }()
+    private lazy var sizePromptText: ClingstoneLabel = {
+        let label = ClingstoneLabel(
+            "Select Paper Size:",
+            type: .h3_regular
+        )
+        addSubview(label)
+        return label
+    }()
+    private lazy var sizeTextField: UITextField = {
+        let textfield = UITextField()
+        textfield.text = paperSizes[0]
+        textfield.textAlignment = .center
+        textfield.borderStyle = .roundedRect
+        textfield.tintColor = .clear
+        textfield.inputView = sizePicker
+        textfield.font = ClingstoneLabelType.body_regular.font
+        addSubview(textfield)
+        return textfield
+    }()
+    lazy var sizePicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.dataSource = self
+        picker.delegate = self
+        return picker
+    }()
+    lazy var scanBtn: ClingstoneButton = {
+        let button = ClingstoneButton()
+        button.setTitle("Scan".uppercased(), for: .normal)
+        button.titleLabel?.font = ClingstoneLabelType.body_regular.font
+        button.backgroundColor = ClingstonePalette.blue.color
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        addSubview(button)
+        return button
     }()
 }
 
@@ -162,3 +214,27 @@ extension ScannerSettingsView {
     }
 }
 
+extension ScannerSettingsView: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        self.paperSizes.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        paperSizes[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        sizeTextField.text = paperSizes[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = ClingstoneLabelType.h3_regular.font
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = paperSizes[row]
+        return pickerLabel!
+    }
+}
