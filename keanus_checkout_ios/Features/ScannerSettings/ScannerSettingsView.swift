@@ -107,7 +107,7 @@ class ScannerSettingsView: UIView {
         control.setOptions([
             .cornerRadius(10),
             .animationSpringDamping(1.0),
-            .indicatorViewBackgroundColor(ClingstonePalette.blue.color)
+            .indicatorViewBackgroundColor(ClingstonePalette.green.color)
         ])
         addSubview(control)
         return control
@@ -123,7 +123,7 @@ class ScannerSettingsView: UIView {
         control.setOptions([
             .cornerRadius(10),
             .animationSpringDamping(1.0),
-            .indicatorViewBackgroundColor(ClingstonePalette.blue.color)
+            .indicatorViewBackgroundColor(ClingstonePalette.green.color)
         ])
         addSubview(control)
         return control
