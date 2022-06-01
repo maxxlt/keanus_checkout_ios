@@ -8,6 +8,7 @@ target 'keanus_checkout_ios' do
   pod 'lottie-ios'
   pod 'CombineCocoa'
   pod 'BetterSegmentedControl', '~> 2.0'
+  pod 'Switches'
 
 end
 

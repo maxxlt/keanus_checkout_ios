@@ -54,10 +54,10 @@ class ScannerCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         if selected {
             checkmark.isHidden = false
-            background.layer.borderColor = ClingstonePalette.green.color.cgColor
+            background.layer.borderColor = ClingstonePalette.cyan.color.cgColor
             background.layer.borderWidth = 2
             title.font = ClingstoneLabelType.body_bold.font
-            title.textColor = ClingstonePalette.green.color
+            title.textColor = ClingstonePalette.cyan.color
             
         } else {
             checkmark.isHidden = true
@@ -94,7 +94,7 @@ class ScannerCell: UITableViewCell {
     private lazy var checkmark: UIImageView = {
         let iv = UIImageView(
             image: .named(.checkmark)
-                .withColor(ClingstonePalette.green.color)
+                .withColor(ClingstonePalette.cyan.color)
         )
         iv.contentMode = .scaleAspectFit
         background.addSubview(iv)

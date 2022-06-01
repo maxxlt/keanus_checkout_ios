@@ -8,6 +8,7 @@
 import Combine
 import UIKit
 import BetterSegmentedControl
+import Switches
 
 class ScannerSettingsView: UIView {
     // MARK: - Public APIs
@@ -57,6 +58,16 @@ class ScannerSettingsView: UIView {
             $0.left.right.equalTo(subtitle)
             $0.height.equalTo(54)
         }
+        blankPageTitle.snp.makeConstraints {
+            $0.top.equalTo(duplexControl.snp.bottom).offset(16)
+            $0.left.equalTo(duplexControl)
+            $0.right.equalTo(blankPageSwitch.snp.left).offset(-8)
+        }
+        blankPageSwitch.snp.makeConstraints {
+            $0.centerY.equalTo(blankPageTitle)
+            $0.right.equalTo(duplexControl)
+            $0.width.equalTo(80)
+        }
     }
     
     // MARK: - Private members
@@ -101,13 +112,13 @@ class ScannerSettingsView: UIView {
         control.segments = LabelSegment.segments(
             withTitles: ["Color", "Speed Color", "Gray Scale"],
             normalFont: ClingstoneLabelType.body_thin.font,
-            selectedFont: ClingstoneLabelType.body_bold.font,
+            selectedFont: ClingstoneLabelType.body_regular.font,
             selectedTextColor: .white
         )
         control.setOptions([
             .cornerRadius(10),
             .animationSpringDamping(1.0),
-            .indicatorViewBackgroundColor(ClingstonePalette.green.color)
+            .indicatorViewBackgroundColor(ClingstonePalette.cyan.color)
         ])
         addSubview(control)
         return control
@@ -117,16 +128,30 @@ class ScannerSettingsView: UIView {
         control.segments = LabelSegment.segments(
             withTitles: ["Duplex Off", "Duplex Long", "Duplex Short"],
             normalFont: ClingstoneLabelType.body_thin.font,
-            selectedFont: ClingstoneLabelType.body_bold.font,
+            selectedFont: ClingstoneLabelType.body_regular.font,
             selectedTextColor: .white
         )
         control.setOptions([
             .cornerRadius(10),
             .animationSpringDamping(1.0),
-            .indicatorViewBackgroundColor(ClingstonePalette.green.color)
+            .indicatorViewBackgroundColor(ClingstonePalette.cyan.color)
         ])
         addSubview(control)
         return control
+    }()
+    private lazy var blankPageTitle: ClingstoneLabel = {
+        let label = ClingstoneLabel(
+            "Skip blank page?",
+            type: .h3_regular
+        )
+        addSubview(label)
+        return label
+    }()
+    private lazy var blankPageSwitch: YapSwitch = {
+        let switcher = YapSwitch()
+        switcher.onTintColor = ClingstonePalette.cyan.color
+        addSubview(switcher)
+        return switcher
     }()
 }
 
