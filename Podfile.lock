@@ -1,24 +1,28 @@
 PODS:
+  - BetterSegmentedControl (2.0.1)
   - CombineCocoa (0.4.0)
   - lottie-ios (3.3.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - BetterSegmentedControl (~> 2.0)
   - CombineCocoa
   - lottie-ios
   - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
   trunk:
+    - BetterSegmentedControl
     - CombineCocoa
     - lottie-ios
     - SnapKit
 
 SPEC CHECKSUMS:
+  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 75d6bd6e2b15ffb4407966410f983418a14c4d8c
+PODFILE CHECKSUM: e8b9538e4efaa9b52be7764090aba517123aa5be
 
 COCOAPODS: 1.11.2

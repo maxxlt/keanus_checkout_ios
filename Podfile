@@ -7,6 +7,7 @@ target 'keanus_checkout_ios' do
   pod 'SnapKit', '~> 5.6.0'
   pod 'lottie-ios'
   pod 'CombineCocoa'
+  pod 'BetterSegmentedControl', '~> 2.0'
 
 end
 

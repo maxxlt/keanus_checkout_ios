@@ -41,23 +41,27 @@ class SetupScannerView: UIView {
             $0.left.equalTo(self).offset(32)
             $0.right.equalTo(self).offset(-32)
         }
+        subtitle.snp.makeConstraints {
+            $0.top.equalTo(title.snp.bottom).offset(8)
+            $0.left.right.equalTo(title)
+        }
         loadingView.snp.makeConstraints {
             $0.centerX.equalTo(self)
-            $0.top.equalTo(title.snp.bottom)
+            $0.top.equalTo(subtitle.snp.bottom)
             $0.bottom.equalTo(self)
         }
         emptyView.snp.makeConstraints {
             $0.centerX.equalTo(self)
-            $0.top.equalTo(title.snp.bottom)
+            $0.top.equalTo(subtitle.snp.bottom)
             $0.bottom.equalTo(self)
         }
         emptyTitle.snp.makeConstraints {
-            $0.centerY.equalTo(emptyView).offset(-16)
+            $0.centerY.equalTo(emptyView).offset(-32)
             $0.centerX.equalTo(emptyView)
         }
         doneView.snp.makeConstraints {
             $0.left.right.equalTo(title)
-            $0.top.equalTo(title.snp.bottom).offset(16)
+            $0.top.equalTo(subtitle.snp.bottom).offset(16)
             $0.bottom.equalTo(self)
         }
         table.snp.makeConstraints {
@@ -86,8 +90,18 @@ class SetupScannerView: UIView {
         let label = ClingstoneLabel(
             "Let's setup your Brother scanner",
             type: .h2_semibold,
-            align: .center,
+            align: .left,
             numLines: 2
+        )
+        addSubview(label)
+        return label
+    }()
+    private lazy var subtitle: ClingstoneLabel = {
+        let label = ClingstoneLabel(
+            "Make sure to go to Settings, then Wifi, then connect to your scanner's SSID",
+            type: .h3_regular,
+            align: .left,
+            numLines: 3
         )
         addSubview(label)
         return label
@@ -139,6 +153,8 @@ class SetupScannerView: UIView {
         button.setTitle("Done".uppercased(), for: .normal)
         button.titleLabel?.font = ClingstoneLabelType.body_regular.font
         button.backgroundColor = ClingstonePalette.blue.color
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
         doneView.addSubview(button)
         return button
     }()

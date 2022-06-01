@@ -8,11 +8,13 @@
 import Combine
 import UIKit
 import CombineCocoa
+import BRScanKit
 
 class ScannerSettingsVC: UIViewController {
     
     // MARK: - Inits
-    init() {
+    init(selectedScanner: BRScanDevice) {
+        self.selectedScanner = selectedScanner
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) { nil }
@@ -41,6 +43,7 @@ class ScannerSettingsVC: UIViewController {
     
     // MARK: - Private vars
     private var observables = Set<AnyCancellable>()
+    private var selectedScanner: BRScanDevice
     
     // MARK: - Private methods
     
@@ -49,6 +52,6 @@ class ScannerSettingsVC: UIViewController {
         ScannerSettingsView()
     }()
     private lazy var vm: ScannerSettingsVM = {
-        ScannerSettingsVM()
+        ScannerSettingsVM(selectedScanner: self.selectedScanner)
     }()
 }

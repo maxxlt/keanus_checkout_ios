@@ -6,6 +6,7 @@
 //
 
 import Combine
+import BRScanKit
 
 class ScannerSettingsVM {
     
@@ -16,10 +17,12 @@ class ScannerSettingsVM {
     
     // MARK: - Published vars
     @Published private(set) var state: State
+    @Published private(set) var scanner: BRScanDevice
     
     // MARK: - Inits
-    init() {
+    init(selectedScanner: BRScanDevice) {
         self.state = .loading
+        self.scanner = selectedScanner
         configureOutput()
     }
     

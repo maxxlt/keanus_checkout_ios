@@ -63,9 +63,15 @@ class SetupScannerVC: UIViewController {
                 .tapPublisher
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] in
-                    let vc = ScannerSettingsVC()
-                    self?.navigationController?
-                        .pushViewController(vc, animated: true)
+                    if let index = self?.currScannerIndex,
+                       let scanner = self?.vm.brotherDevices[index]
+                    {
+                        let vc = ScannerSettingsVC(
+                            selectedScanner: scanner
+                        )
+                        self?.navigationController?
+                            .pushViewController(vc, animated: true)
+                    }
                 },
             NotificationCenter.default.publisher(
                 for: UIApplication.willEnterForegroundNotification

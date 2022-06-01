@@ -14,6 +14,7 @@ extension UIImage {
 }
 
 enum ImageAssetName: String, CaseIterable {
+    case surfer_1 = "surfer 1"
     case surfer_5 = "surfer 5"
     case placeholder
     case checkmark
