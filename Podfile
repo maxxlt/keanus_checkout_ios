@@ -10,6 +10,8 @@ target 'keanus_checkout_ios' do
   pod 'BetterSegmentedControl', '~> 2.0'
   pod 'Switches'
   pod 'IQKeyboardManagerSwift'
+  pod "SwiftSpinner"
+  pod 'LSDialogViewController', '~> 4.0'
 
 end
 

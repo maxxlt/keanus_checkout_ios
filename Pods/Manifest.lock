@@ -3,7 +3,9 @@ PODS:
   - CombineCocoa (0.4.0)
   - IQKeyboardManagerSwift (6.5.10)
   - lottie-ios (3.3.0)
+  - LSDialogViewController (4.0)
   - SnapKit (5.6.0)
+  - SwiftSpinner (2.2.0)
   - Switches (3.0.0)
 
 DEPENDENCIES:
@@ -11,7 +13,9 @@ DEPENDENCIES:
   - CombineCocoa
   - IQKeyboardManagerSwift
   - lottie-ios
+  - LSDialogViewController (~> 4.0)
   - SnapKit (~> 5.6.0)
+  - SwiftSpinner
   - Switches
 
 SPEC REPOS:
@@ -20,7 +24,9 @@ SPEC REPOS:
     - CombineCocoa
     - IQKeyboardManagerSwift
     - lottie-ios
+    - LSDialogViewController
     - SnapKit
+    - SwiftSpinner
     - Switches
 
 SPEC CHECKSUMS:
@@ -28,9 +34,11 @@ SPEC CHECKSUMS:
   CombineCocoa: 68a050228ce7c53c1c5ac2c57cccf92a7f5c5085
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  LSDialogViewController: ab7dd9a3e3facf95b386b7209401ac96bbdc3514
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
   Switches: 6d54f7cafb1b7d7c405b19cf7b3de925742d0a55
 
-PODFILE CHECKSUM: 96dbeec578f4bd537a2cd7aa06c2d62ec3285884
+PODFILE CHECKSUM: 1c7227d9faa99a470bf4e5457729b5a44490c6c0
 
 COCOAPODS: 1.11.2

@@ -89,7 +89,7 @@ class ScannerSettingsView: UIView {
     @objc private func helloButtonTapped() {
         actionPublisher.send(.action1)
     }
-    private let paperSizes = ["Auto Size", "Photo L", "Photo", "Business Card", "JIS B5",
+    let paperSizes = ["Auto Size", "Photo L", "Photo", "Business Card", "JIS B5",
                       "A4", "Letter", "Legal", "JIS B4", "Ledger", "A3"]
     
     // MARK: - Lazy Loads
@@ -178,7 +178,7 @@ class ScannerSettingsView: UIView {
         addSubview(label)
         return label
     }()
-    private lazy var sizeTextField: UITextField = {
+    lazy var sizeTextField: UITextField = {
         let textfield = UITextField()
         textfield.text = paperSizes[0]
         textfield.textAlignment = .center
@@ -189,7 +189,7 @@ class ScannerSettingsView: UIView {
         addSubview(textfield)
         return textfield
     }()
-    lazy var sizePicker: UIPickerView = {
+    private lazy var sizePicker: UIPickerView = {
         let picker = UIPickerView()
         picker.dataSource = self
         picker.delegate = self

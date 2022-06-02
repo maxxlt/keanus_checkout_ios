@@ -101,6 +101,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		621850B02848678600DE84CB /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
 		621CBCBD2845B42B009595F7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +150,7 @@
 		6237A08F2845418B00BD73BA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				621850B02848678600DE84CB /* CheckIn */,
 				62BA61262846D4FF00508AB2 /* ScannerSettings */,
 				6237A093284542F400BD73BA /* SetupScanner */,
 				6237A0912845419E00BD73BA /* LaunchScreen */,
