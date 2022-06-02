@@ -11,6 +11,7 @@ import CombineCocoa
 import BRScanKit
 import SwiftSpinner
 import Vision
+import LSDialogViewController
 
 class ScannerSettingsVC: UIViewController {
     
