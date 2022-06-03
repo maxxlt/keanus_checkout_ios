@@ -152,6 +152,26 @@ class ScannerSettingsVC: UIViewController {
             }
         }
     }
+    private func confirm(image: UIImage) {
+        let vc = ConfirmInfoVC(
+            frame: self.customView.frame,
+            image: image)
+        vc.actionPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] action in
+                switch action {
+                    case .dismiss: self?.dismissDialogViewController(.zoomInOut)
+                }
+            }
+            .store(in: &observables)
+        self.presentDialogViewController(
+            vc,
+            animationPattern: .zoomInOut,
+            backgroundViewType: .solid,
+            dismissButtonEnabled: false,
+            completion: nil
+        )
+    }
     
     // MARK: - Lazy vars
     private lazy var customView: ScannerSettingsView = {
@@ -182,7 +202,7 @@ extension ScannerSettingsVC: BRScanJobDelegate {
 //                self?.imageIndexStepper.maximumValue = Double(self?.scannedImages.count ?? 0)
 //                self?.scannedImageView.image = scannedImage
                 if let scannedImage = self?.scannedImages[0] {
-                    self?.analyze(image: scannedImage)
+                    self?.confirm(image: scannedImage)
                 }
             }
         }
